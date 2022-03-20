@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div id="header">
+    <a id="header-link" href>nickgorden.xyz</a>
+    <span id="header-subtitle">- Nick Gorden</span>
+    <a id="header-source" href="https://github.com/ngorden"></a>
+</div>
+<hr class="hidden-ruler">
+<div id="content">
+    <table>
+        <tbody>
+        <tr>
+            <td id="nav" style="vertical-align: top;">
+                <ul id="main-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/tech">Tech Stack</a></li>
+                    <li><a href="https://github.com/ngorden">Projects</a></li>
+                    <li><a href="{{ url_for('static', filename='resume.pdf') }}">Resume</a></li>
+                </ul>
+            </td>
+            <td id="main" style="vertical-align: top;">
+                {% block page_content %}
+                {% endblock %}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr class="hidden-ruler">
+<div id="footer">
+    <span class="right">
+        Copyright ©️2022 - Nicholas Gorden |
+        <a href="https://linkedin.com/in/nicholas-gorden">LinkedIn</a> |
+        <a href="https://github.com/ngorden">Sources</a>
+    </span>
+</div>
+</body>
+</html>

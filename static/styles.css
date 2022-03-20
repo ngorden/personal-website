@@ -1,0 +1,388 @@
+body {
+    background-color: #eee;
+    color: #222;
+    font-family: monospace, sans-serif;
+    font-size: 1rem;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #005386;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr.hidden-ruler {
+    display: none;
+}
+
+#header {
+    clear: both;
+    color: #ffffff;
+    border-bottom: solid 2px #526587;
+    background: #333a56;
+    background: linear-gradient(to right, #000000, #7e5cb6);
+    height: 2.75em;
+    font-size: 1.3em;
+    line-height: 2.75em;
+    padding: 0 1em;
+}
+
+#header-subtitle {
+    color: #cacaca;
+    display: inline-block;
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+#header-link,
+#header-link:hover,
+#header-logo:hover {
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+#header-source {
+    color: inherit;
+    font-size: 0.75em;
+    float: right;
+}
+
+h1 {
+    border-bottom: 1px solid #cacaca;
+    margin: 1em 0 1em 0;
+    padding: 0 0 0.75em 0;
+    font-size: 1.4rem;
+}
+
+h2 {
+    margin: 1em 0 0.25em 0;
+    font-size: 1.3rem;
+}
+
+h3 {
+    margin: 1em 0 0.25em 0;
+    font-size: 1.0rem;
+}
+
+h4 {
+    margin: 1em 0 0.25em 0;
+    font-size: 0.9rem;
+}
+
+p, li {
+    color: #444;
+}
+
+code {
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 2rem;
+    background-color: #efefef;
+    padding: 0.3em;
+}
+
+pre {
+    background-color: #efefef;
+    padding: 1em;
+    overflow: auto;
+}
+
+pre code {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    background-color: unset;
+    padding: 0;
+}
+
+#content {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#nav {
+    background-color: #fff;
+    /*	float           : left;*/
+    margin: 0 1px 0 0;
+    padding: 1em 0;
+    line-height: 1.5em;
+    border-right: 1px dotted #ccc;
+    width: 15em;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav > div > ul:first-child li > a:before {
+    content: "\203A";
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em;
+}
+
+#nav > div > ul:first-child li.active > a:before {
+    content: "\00BB";
+}
+
+/* keep link hover over full width, base level */
+#nav li a {
+    display: block;
+    margin: 0;
+    padding: 0.2em 2em;
+    line-height: 1.65em;
+}
+
+/* keep link hover over full width, first level */
+#nav li ul > li a {
+    padding-left: 2.6em !important;
+}
+
+/* keep link hover over full width, second level */
+#nav li ul ul > li a {
+    padding-left: 3.2em !important;
+}
+
+/* keep link hover over full width, third level */
+#nav li ul ul ul > li a {
+    padding-left: 3.8em !important;
+}
+
+#nav li a:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+
+#nav li.active > a {
+    color: #222;
+    font-weight: bold;
+}
+
+#main {
+    margin: 0 0 0 200px;
+    padding: 1.5em;
+    max-width: 50em;
+}
+
+#footer {
+    clear: both;
+    color: #666;
+    border-top: 1px solid #ccc;
+    font-size: 0.85em;
+    line-height: 1.7em;
+    padding: 1em;
+    margin: 0 0 1.5em 0;
+}
+
+span.left {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+span.right {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.definition {
+    padding-left: 2em;
+}
+
+.definition > p:first-child {
+    text-indent: -2em;
+}
+
+.reference {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+p.left {
+    text-align: left;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.right {
+    text-align: right;
+}
+
+.spoiler {
+    color: #000;
+    background: #000;
+    cursor: pointer;
+}
+
+.spoiler:active {
+    color: inherit;
+    background: inherit;
+}
+
+.articles ul {
+    width: 50em;
+    margin: 0;
+    padding: 0;
+}
+
+.articles li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.repo-log {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+ul.repo-log li {
+    font-family: monospace;
+    font-size: 0.7em;
+}
+
+ul.repo-log li .log-date {
+    font-weight: bold;
+    padding-right: 1em;
+}
+
+td {
+    flex: fit-content;
+    margin: auto;
+}
+
+/* table of contents */
+.toc {
+    background-color: #f3f1f9;
+    padding: 0.5em 2em 2em;
+    overflow: auto;
+}
+
+.toc .toc-title {
+    font-weight: 700;
+}
+
+.toc > ul,
+.toc > ul ul {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc > ul ul {
+    padding-left: 1.5em;
+}
+
+.toc li {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.grohtml img {
+    margin-left: 2em;
+    padding: 1em 1.5em;
+    border: 1px solid #ccc;
+}
+
+.theorem img {
+    padding: 1em 1.5em;
+    border: 1px double #000;
+    outline: 2px solid #000;
+    outline-offset: -4px;
+}
+
+dl, dt, dd {
+    padding: 0;
+    margin: 0;
+}
+
+dt {
+    float: left;
+    font-weight: bolder;
+    padding-right: 1ch;
+    border: 0 dashed red;
+    text-align: right;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+dl {
+    padding-left: 2em;
+}
+
+dl > dt {
+    text-indent: -2em;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger ~ label {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #burger-wrapper {
+        display: none;
+    }
+
+    #nav {
+        width: auto;
+        max-width: 15em;
+    }
+
+    #hamburger ~ label {
+        display: block;
+        color: black;
+        background: white;
+        font-style: normal;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 10px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    #hamburger ~ label:before {
+        content: "\2630"
+    }
+
+    #hamburger:checked ~ label:before {
+        content: "\2A09"
+    }
+
+    #hamburger:checked ~ #burger-wrapper {
+        display: block;
+    }
+
+    #hamburger:checked ~ label {
+        color: white;
+        background: black;
+    }
+}
